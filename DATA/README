@@ -1,5 +1,14 @@
-Dataset description:
-Input featureS:
-Output labels:
-Dataset source:
+Dataset description: This dataset includes data about JPMorgan stock prices.
+
+Input features:
+-Price at market open
+-Highest price of the day
+-Lowest price of the day
+-Price at market close
+-Closing price after adjustments
+-Number of shares traded for that day
+
+Output labels: This dataset uses these variables to predict market prices of following days based on the given information.
+Dataset source: https://www.kaggle.com/datasets/umerhaddii/jpmorgan-chase-stock-data-2025
+
 How to run the code?:
