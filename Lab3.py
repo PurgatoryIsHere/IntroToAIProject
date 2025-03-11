@@ -3,16 +3,14 @@
 #parser.add_argument("--file", required=True, help="Path to dataset file")
 #args = parser.parse_args()
 
-import csv
+import pandas as pd
 
-with open('JPStockPredict.csv', 'r') as file:
-    csvreader = csv.reader(file)
-    header = next(csvreader)
-    print("Header:", header)
-    for row in csvreader:
-        print("Row:", row)
-        # Process data here
+jp_stock_frame = pd.read_csv("JPStockPredict.csv")
+
+print(jp_stock_frame)
 
 def splitData(self):
+    pass
 
 def splitDataRandom(self):
+    pass
