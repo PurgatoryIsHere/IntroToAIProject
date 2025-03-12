@@ -1,9 +1,6 @@
 import pandas as pd
+import argparse
 import math
-
-jp_stock_frame = pd.read_csv("JPStockPredict.csv")
-
-# print(jp_stock_frame)
 
 def splitData(data_frame):
     #  80% training, 20% testing.
@@ -25,10 +22,22 @@ def splitDataRandom(data_frame):
 
 
 if __name__ == "__main__":
-    training, testing = splitData(jp_stock_frame)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--filename", "-f", required=True, help="Path to dataset file")
+    args = parser.parse_args()
+
+    df = pd.read_csv(args.filename)
+
+    print("\nSplitting data no random\n")
+    training, testing = splitData(df)
+    print("\nTraining Data\n")
     print(training)
+    print("\nTesting Data\n")
     print(testing)
 
-    randTrain, randTest = splitDataRandom(jp_stock_frame)
+    print("\nSplitting data randomly\n")
+    randTrain, randTest = splitDataRandom(df)
+    print("\nTraining Data\n")
     print(randTrain)
+    print("\nTesting Data\n")
     print(randTest)
