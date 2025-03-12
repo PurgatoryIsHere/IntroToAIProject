@@ -12,3 +12,6 @@ Output labels: This dataset uses these variables to predict market prices of fol
 Dataset source: https://www.kaggle.com/datasets/umerhaddii/jpmorgan-chase-stock-data-2025
 
 How to run the code?:
+1. pip install -r requirements.txt
+2. Navigate to Lab3.py
+3. Click the Run button

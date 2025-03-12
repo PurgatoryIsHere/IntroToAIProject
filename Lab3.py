@@ -1,8 +1,3 @@
-#import argparse
-#parser = argparse.ArgumentParser()
-#parser.add_argument("--file", required=True, help="Path to dataset file")
-#args = parser.parse_args()
-
 import pandas as pd
 import math
 
