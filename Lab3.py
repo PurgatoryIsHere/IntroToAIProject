@@ -28,6 +28,15 @@ if __name__ == "__main__":
 
     df = pd.read_csv(args.filename)
 
+    
+
+    print("\n===Statistics==")
+    print(f"Mean:\n{df[['open', 'close', 'high', 'low', 'volume', 'adj_close']].mean()}\n")
+    print(f"Max:\n{df[['open', 'close', 'high', 'low', 'volume', 'adj_close']].max()}\n")
+    print(f"Min:\n{df[['open', 'close', 'high', 'low', 'volume', 'adj_close']].min()}\n")
+    print(f"Correlation:\n{df[['open', 'close', 'high', 'low', 'volume', 'adj_close']].corr()}\n")
+
+
     print("\nSplitting data no random\n")
     training, testing = splitData(df)
     print("\nTraining Data\n")
