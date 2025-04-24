@@ -1,0 +1,3 @@
+,model_type,features_used,split_method,MAE,MSE,RMSE,R2,MAPE,Accuracy,test_size,file_type
+Model2,Decision Tree,"['col for col in df.columns if col not in [date', 'close']",Chronological,58.96409476458912,5245.652446243585,72.42687654623514,-1.8557516822198434,40.38748881219881,59.61251118780119,2261,py
+Model4,Linear Regression,"['high', 'low', 'volume']",Random,0.2948148400397757,0.2640041822792582,0.5138133730054699,0.9998779753283803,0.7051367248253898,99.2948632751746,2267,py

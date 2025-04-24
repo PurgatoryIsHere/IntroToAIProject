@@ -1,0 +1,116 @@
+
+        <html>
+        <head>
+            <title>Stock Prediction Models Comparison</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 20px; }
+                table { border-collapse: collapse; width: 100%; }
+                th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }
+                th { background-color: #f2f2f2; }
+                tr:hover { background-color: #f5f5f5; }
+                .model-details { margin-top: 30px; padding: 15px; background-color: #f9f9f9; border-radius: 5px; }
+                .metric-good { color: green; font-weight: bold; }
+                .metric-bad { color: red; }
+                h1, h2 { color: #333366; }
+                .file-py { color: blue; }
+                .file-ipynb { color: orange; }
+            </style>
+        </head>
+        <body>
+            <h1>Stock Prediction Models Comparison Report</h1>
+
+            <h2>Performance Summary</h2>
+            <table>
+                <tr>
+                    <th>Model</th>
+                    <th>Type</th>
+                    <th>File Type</th>
+                    <th>Accuracy (%)</th>
+                    <th>MAE</th>
+                    <th>RMSE</th>
+                    <th>R²</th>
+                    <th>Split Method</th>
+                </tr>
+        
+                <tr>
+                    <td>Model2</td>
+                    <td>Decision Tree</td>
+                    <td class="file-py">py</td>
+                    <td class="metric-bad">59.61%</td>
+                    <td>58.9641</td>
+                    <td>72.4269</td>
+                    <td class="metric-bad">-1.8558</td>
+                    <td>Chronological</td>
+                </tr>
+            
+                <tr>
+                    <td>Model4</td>
+                    <td>Linear Regression</td>
+                    <td class="file-py">py</td>
+                    <td class="metric-good">99.29%</td>
+                    <td>0.2948</td>
+                    <td>0.5138</td>
+                    <td class="metric-good">0.9999</td>
+                    <td>Random</td>
+                </tr>
+            
+            </table>
+
+            <h2>Model Details</h2>
+        
+            <div class="model-details">
+                <h3>Model2 (py file)</h3>
+                <p><strong>Model Type:</strong> Decision Tree</p>
+                <p><strong>Features Used:</strong> col for col in df.columns if col not in [date, close</p>
+                <p><strong>Split Method:</strong> Chronological</p>
+                <p><strong>Test Size:</strong> 2261 samples</p>
+                <p><strong>Performance Metrics:</strong></p>
+                <ul>
+                    <li>Accuracy: 59.61%</li>
+                    <li>MAE: 58.9641</li>
+                    <li>MSE: 5245.6524</li>
+                    <li>RMSE: 72.4269</li>
+                    <li>R²: -1.8558</li>
+                </ul>
+            </div>
+            
+            <div class="model-details">
+                <h3>Model4 (py file)</h3>
+                <p><strong>Model Type:</strong> Linear Regression</p>
+                <p><strong>Features Used:</strong> high, low, volume</p>
+                <p><strong>Split Method:</strong> Random</p>
+                <p><strong>Test Size:</strong> 2267 samples</p>
+                <p><strong>Performance Metrics:</strong></p>
+                <ul>
+                    <li>Accuracy: 99.29%</li>
+                    <li>MAE: 0.2948</li>
+                    <li>MSE: 0.2640</li>
+                    <li>RMSE: 0.5138</li>
+                    <li>R²: 0.9999</li>
+                </ul>
+            </div>
+            
+            <h2>Conclusions</h2>
+            <p>Based on the metrics above, the best performing model is: 
+        <strong>Model4</strong> with an accuracy of 99.29%.</p>
+                <p>Best model by different metrics:</p>
+                <ul>
+                    <li><strong>Lowest MAE:</strong> Model4</li>
+                    <li><strong>Lowest RMSE:</strong> Model4</li>
+                    <li><strong>Highest R²:</strong> Model4</li>
+                </ul>
+            
+            <p>Recommendations:</p>
+            <ul>
+                <li>Consider ensemble methods combining the strengths of different models</li>
+                <li>Evaluate models on different time periods to test robustness</li>
+                <li>Explore feature importance to understand key drivers</li>
+            </ul>
+
+            <p>Images:</p>
+            <img src="model_accuracy_comparison.png" alt="Accuracy Comparison" style="max-width: 100%;">
+            <img src="model_error_comparison.png" alt="Error Metrics Comparison" style="max-width: 100%;">
+            <img src="model_r2_comparison.png" alt="R² Score Comparison" style="max-width: 100%;">
+        </body>
+        </html>
+        
