@@ -1,26 +1,47 @@
-# Intro-To-AI-Project
+# Intro to AI – Stock Price Prediction Project
 
-**Group**: Christopher Brice, Gabe Sanders, Evan Archer, Marvin Wocheslander
+**Team Members**: Christopher Brice, Gabe Sanders, Evan Archer, Marvin Wocheslander
 
-## Project Description
+## Project Overview
 
-Using machine learning to predict stock prices of JP Morgan Chase (JPM). The goal of this project is to use machine learning to predict stock prices of JPM based on historical stock data.
+This project applies machine learning techniques to predict the stock prices of JPMorgan Chase & Co. (JPM) using historical stock data. Our primary goal was to evaluate multiple models and determine which machine learning approach yields the most accurate predictions for JPM stock prices.
 
-We tested a wide range of machine learning models to find the best model for this task. We used the following models:
+We explored both traditional and deep learning methods and evaluated their performance. Below are the models we tested:
 
-* Linear Regression - `Model4.py`
-* Decision Tree Regressor - `Model2.py`
-* LSTM - `Model1.ipynb`
-* GRU - `Model3.ipynb`
+* **Linear Regression** – Implemented in `Model4.py`
+  A simple baseline model used to understand how well a linear approach performs on stock price prediction.
 
-## Folders
+* **Decision Tree Regressor** – Implemented in `Model2.py`
+  A tree-based model that attempts to learn non-linear patterns in the stock data.
 
-- **DATA**: Contains the dataset used for this project
-- **models**: Contains the models used for this project
-- **compare-models**: Contains the code used to compare the models
-- **assets**: Contains the assets used for this project, such as graphs comparing the models
-- **lab3**: Contains the code used for Lab 3
+* **LSTM (Long Short-Term Memory)** – Implemented in `Model1.ipynb`
+  A type of recurrent neural network (RNN) capable of learning from sequences, particularly suited for time series data.
+
+* **GRU (Gated Recurrent Unit)** – Implemented in `Model3.ipynb`
+  A more lightweight version of LSTM, also designed for sequence learning, potentially faster with similar performance.
+
+Each model was trained and evaluated to compare predictive accuracy and computational efficiency.
+
+
+## Project Structure
+
+* **`DATA/`**
+  Contains the raw and preprocessed datasets used for training and testing the models.
+
+* **`models/`**
+  Includes individual scripts and notebooks for each machine learning model.
+
+* **`compare-models/`**
+  Scripts used to compare model performance using metrics like RMSE, MAE, and visual plots.
+
+* **`assets/`**
+  Visualizations and graphs, such as model comparisons and predictions vs. actual prices.
+
+* **`lab3/`**
+  Code and files used in Lab 3 for experimenting with machine learning concepts related to this project.
+
 
 ## Requirements
 
-Python +v3.10 + JupyterNotebook
+* Python 3.10 or later
+* Jupyter Notebook
