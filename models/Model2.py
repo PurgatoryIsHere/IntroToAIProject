@@ -5,7 +5,7 @@ from sklearn.metrics import mean_absolute_percentage_error
 import matplotlib.pyplot as plt
 
 # Load the data
-df = pd.read_csv("JPStockPredict.csv")
+df = pd.read_csv("../DATA/JPStockPredict.csv")
 
 # Ensure date column is in datetime format
 if 'date' in df.columns:

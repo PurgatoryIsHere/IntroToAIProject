@@ -6,7 +6,7 @@ from sklearn.metrics import mean_absolute_error
 import matplotlib.pyplot as plt
 
 # Load the dataset
-df = pd.read_csv('JPStockPredict.csv')
+df = pd.read_csv('../DATA/JPStockPredict.csv')
 
 # Convert date to datetime
 df['date'] = pd.to_datetime(df['date'])
