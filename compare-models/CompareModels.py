@@ -444,7 +444,7 @@ with open('temp_model_results.pkl', 'wb') as f:
 
 # Example usage
 if __name__ == "__main__":
-    evaluator = ModelEvaluator(data_path='JPStockPredict.csv', models_dir='.')
+    evaluator = ModelEvaluator(data_path='../DATA/JPStockPredict.csv', models_dir='../models')
     evaluator.load_data()
     evaluator.load_models()
     evaluator.evaluate_all_models()
